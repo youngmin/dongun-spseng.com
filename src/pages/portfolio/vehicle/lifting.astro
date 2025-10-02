@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navigation from '../../../components/Navigation.astro';
+import Footer from '../../../components/Footer.astro';
+
+const products = [
+  {
+    name: "Telescopic Crane",
+    description: "High quality telescopic crane for all kind of trucks!",
+    features: ["Long telescopic boom", "Excellent hydraulic components", "Designed for lifting heavy cargo"]
+  },
+  {
+    name: "Articulated Crane",
+    description: "High quality articulated crane for all kind of trucks!",
+    features: ["Variety of configurations", "Unique applications", "Flexible operation"]
+  },
+  {
+    name: "Manlift",
+    description: "High quality manlift for all kind of trucks!",
+    features: ["High-technology safety devices", "Safe working environment", "Operator and worker protection"]
+  }
+];
+---
+
+<BaseLayout title="Lifting Solution - SPS Engineering">
+  <div class="min-h-screen bg-background">
+    <Navigation />
+
+    <section class="gradient-bg text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">Lifting Solution</h1>
+        <p class="text-xl lg:text-2xl font-light max-w-3xl">
+          High-quality truck-mounted cranes and manlifts for all kinds of trucks
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">
+            Professional Lifting Equipment
+          </h2>
+          <p class="text-lg text-[hsl(var(--sps-neutral-500))] max-w-3xl mx-auto leading-relaxed">
+            Our lifting solutions provide safe, reliable, and efficient load handling for commercial vehicles.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+          {products.map((product) => (
+            <div class="bg-[hsl(var(--sps-neutral-50))] rounded-2xl p-8 hover:shadow-xl transition-shadow">
+              <h3 class="text-2xl font-bold text-[hsl(var(--sps-neutral-900))] mb-4">{product.name}</h3>
+              <p class="text-lg text-[hsl(var(--sps-neutral-500))] mb-6">{product.description}</p>
+              <ul class="space-y-2">
+                {product.features.map((feature) => (
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-[hsl(var(--sps-accent))] mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-[hsl(var(--sps-neutral-500))]">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>

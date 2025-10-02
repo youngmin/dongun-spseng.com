@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navigation from '../../../components/Navigation.astro';
+import Footer from '../../../components/Footer.astro';
+
+const categories = [
+  {
+    name: "SPV PART I",
+    products: ["Power Unit", "Hydraulic Cylinder", "Hydraulic Hose", "Gate Lift Helper", "Center Post", "The Skate", "M Wing Van Spr Assy", "Toggle Clamp n Hinge", "Accessory"]
+  },
+  {
+    name: "SPV PART II",
+    products: ["Side Rail", "Skate Rail", "AL Parts", "Bended Pipe", "Colored Square Tube", "Cross Member Pipe", "Waterproof Hinge", "Side Gate n Footstep", "AL Bottom Plate", "Front And Rear Plate", "E Track"]
+  },
+  {
+    name: "Tail Lift",
+    products: ["Standard Power TL", "Slider Power TL", "Vertical Power TL", "AL Platform", "Power Units", "Hydraulic Cylinders", "Accessories"]
+  }
+];
+---
+
+<BaseLayout title="Logistics Solution - SPS Engineering">
+  <div class="min-h-screen bg-background">
+    <Navigation />
+
+    <section class="gradient-bg text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">Logistics Solution</h1>
+        <p class="text-xl lg:text-2xl font-light max-w-3xl">
+          Comprehensive vehicle and logistics components for industrial and commercial applications
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">
+            Complete Vehicle Solutions
+          </h2>
+          <p class="text-lg text-[hsl(var(--sps-neutral-500))] max-w-3xl mx-auto leading-relaxed">
+            SPS Engineering provides a full range of specialized parts and components for logistics vehicles,
+            including hydraulic systems, structural components, and tail lift solutions.
+          </p>
+        </div>
+
+        <div class="space-y-12">
+          {categories.map((category) => (
+            <div class="bg-[hsl(var(--sps-neutral-50))] rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-[hsl(var(--sps-primary))] mb-6">{category.name}</h3>
+              <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {category.products.map((product) => (
+                  <div class="bg-white p-4 rounded-lg hover:shadow-md transition-shadow">
+                    <p class="text-[hsl(var(--sps-neutral-700))] font-medium">{product}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>

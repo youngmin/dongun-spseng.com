@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navigation from '../../../components/Navigation.astro';
+import Footer from '../../../components/Footer.astro';
+
+const products = [
+  {
+    name: "Telescopic Arm",
+    description: "Particularly advantageous when working in confined urban environments, when deep excavation is required",
+    features: [
+      "Extended reach capability",
+      "Ideal for urban construction sites",
+      "Deep excavation applications",
+      "Compact storage position"
+    ]
+  },
+  {
+    name: "Demolition Boom",
+    description: "Designed exclusively for demolition work, it is exceptionally durable and safe",
+    features: [
+      "Reinforced structure for demolition",
+      "Enhanced safety features",
+      "Superior durability",
+      "High-reach capabilities"
+    ]
+  },
+  {
+    name: "Long Reach Boom",
+    description: "Offer deeper and long distance digging to boost productivity where standard boom is not able to do the job",
+    features: [
+      "Extended digging depth",
+      "Long-distance reach",
+      "Increased productivity",
+      "Ideal for dredging and slope work"
+    ]
+  }
+];
+---
+
+<BaseLayout title="Excavator Arms and Booms - SPS Engineering">
+  <div class="min-h-screen bg-background">
+    <Navigation />
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">Excavator Arms and Booms</h1>
+        <p class="text-xl lg:text-2xl font-light max-w-3xl">
+          Specialized excavator attachments for extended reach, demolition, and deep excavation
+        </p>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">
+            Advanced Excavator Solutions
+          </h2>
+          <p class="text-lg text-[hsl(var(--sps-neutral-500))] max-w-3xl mx-auto leading-relaxed">
+            SPS Engineering manufactures high-quality excavator arms and booms designed to extend the capabilities
+            of standard excavators. Our products enable operators to tackle specialized tasks with improved efficiency
+            and safety.
+          </p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+          {products.map((product, index) => (
+            <div class="bg-[hsl(var(--sps-neutral-50))] rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300">
+              <div class="mb-6">
+                <span class="inline-block bg-[hsl(var(--sps-primary))] text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  Product {index + 1}
+                </span>
+              </div>
+              <h3 class="text-2xl font-bold text-[hsl(var(--sps-neutral-900))] mb-4">
+                {product.name}
+              </h3>
+              <p class="text-lg text-[hsl(var(--sps-neutral-500))] mb-6 leading-relaxed">
+                {product.description}
+              </p>
+              <h4 class="font-semibold text-[hsl(var(--sps-neutral-900))] mb-3">Key Features:</h4>
+              <ul class="space-y-2">
+                {product.features.map((feature) => (
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-[hsl(var(--sps-accent))] mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-[hsl(var(--sps-neutral-500))]">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <!-- Applications Section -->
+        <div class="bg-gradient-to-r from-[hsl(var(--sps-primary))] to-[hsl(var(--sps-secondary))] rounded-2xl p-12 text-white">
+          <h2 class="text-3xl font-bold mb-8 text-center">Applications</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="text-center">
+              <div class="bg-white/10 rounded-lg p-6 mb-3">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold">Urban Demolition</h3>
+            </div>
+            <div class="text-center">
+              <div class="bg-white/10 rounded-lg p-6 mb-3">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold">Deep Excavation</h3>
+            </div>
+            <div class="text-center">
+              <div class="bg-white/10 rounded-lg p-6 mb-3">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold">Dredging Work</h3>
+            </div>
+            <div class="text-center">
+              <div class="bg-white/10 rounded-lg p-6 mb-3">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold">Slope Work</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-[hsl(var(--sps-neutral-50))]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-[hsl(var(--sps-neutral-900))] mb-12 text-center">Why Choose SPS Excavator Arms?</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-[hsl(var(--sps-primary))] mb-3">Superior Engineering</h3>
+            <p class="text-[hsl(var(--sps-neutral-500))]">
+              Precision-engineered components ensure optimal performance and longevity.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-[hsl(var(--sps-primary))] mb-3">Safety First</h3>
+            <p class="text-[hsl(var(--sps-neutral-500))]">
+              Enhanced safety features protect operators and equipment.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-[hsl(var(--sps-primary))] mb-3">Versatility</h3>
+            <p class="text-[hsl(var(--sps-neutral-500))]">
+              Adaptable to various job site conditions and requirements.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-[hsl(var(--sps-primary))] mb-3">Productivity Boost</h3>
+            <p class="text-[hsl(var(--sps-neutral-500))]">
+              Complete tasks faster with extended reach and specialized capabilities.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-[hsl(var(--sps-primary))] mb-3">Quality Materials</h3>
+            <p class="text-[hsl(var(--sps-neutral-500))]">
+              High-grade steel construction for maximum durability.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-[hsl(var(--sps-primary))] mb-3">Expert Support</h3>
+            <p class="text-[hsl(var(--sps-neutral-500))]">
+              Comprehensive technical support and after-sales service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>

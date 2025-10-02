@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navigation from '../../../components/Navigation.astro';
+import Footer from '../../../components/Footer.astro';
+
+const products = [
+  {
+    name: "Front Loader",
+    description: "High quality front loader for all kind of tractors!",
+    features: ["Faster and safer operation system", "Helps farmers work more easily", "Versatile attachment compatibility"]
+  },
+  {
+    name: "Backhoe Loader",
+    description: "High quality backhoe loader for all kind of tractors!",
+    features: ["Powerful excavation", "Quick lifting performance", "Speedy and precise work capabilities"]
+  },
+  {
+    name: "Tractor Mounted Crane",
+    description: "High quality crane for all kind of tractors!",
+    features: ["Superior mobility", "Rugged reliability", "High productivity"]
+  },
+  {
+    name: "Attachments",
+    description: "High quality attachment for all kind of tractors!",
+    features: ["Wide variety of implements", "Universal compatibility", "Durable construction"]
+  }
+];
+---
+
+<BaseLayout title="Farming Solution - SPS Engineering">
+  <div class="min-h-screen bg-background">
+    <Navigation />
+
+    <section class="gradient-bg text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">Farming Solution</h1>
+        <p class="text-xl lg:text-2xl font-light max-w-3xl">
+          Farm implement manufacturing for all kinds of tractors
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">
+            Agricultural Equipment Excellence
+          </h2>
+          <p class="text-lg text-[hsl(var(--sps-neutral-500))] max-w-3xl mx-auto leading-relaxed">
+            SPS Engineering specializes in high-quality farm implements designed to help farmers work more efficiently
+            and safely across all agricultural applications.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          {products.map((product) => (
+            <div class="bg-[hsl(var(--sps-neutral-50))] rounded-2xl p-8 hover:shadow-xl transition-shadow">
+              <div class="mb-4">
+                <span class="inline-block bg-[hsl(var(--sps-primary))] text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  Farm Equipment
+                </span>
+              </div>
+              <h3 class="text-2xl font-bold text-[hsl(var(--sps-neutral-900))] mb-4">{product.name}</h3>
+              <p class="text-lg text-[hsl(var(--sps-neutral-500))] mb-6">{product.description}</p>
+              <h4 class="font-semibold text-[hsl(var(--sps-neutral-900))] mb-3">Key Features:</h4>
+              <ul class="space-y-2">
+                {product.features.map((feature) => (
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-[hsl(var(--sps-accent))] mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-[hsl(var(--sps-neutral-500))]">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>

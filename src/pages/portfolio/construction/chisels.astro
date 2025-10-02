@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navigation from '../../../components/Navigation.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<BaseLayout title="Chisels and Breaker Parts - SPS Engineering">
+  <div class="min-h-screen bg-background">
+    <Navigation />
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">Chisels and Breaker Parts</h1>
+        <p class="text-xl lg:text-2xl font-light max-w-3xl">
+          High-quality chisels and breaker components for construction machinery
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Tabs Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <!-- Tab Navigation -->
+        <div class="flex border-b border-gray-200 mb-8">
+          <button class="tab-button active px-6 py-3 font-semibold border-b-2 border-[hsl(var(--sps-primary))] text-[hsl(var(--sps-primary))]" data-tab="about">
+            About
+          </button>
+          <button class="tab-button px-6 py-3 font-semibold text-gray-600 hover:text-[hsl(var(--sps-primary))]" data-tab="facilities">
+            Facilities
+          </button>
+          <button class="tab-button px-6 py-3 font-semibold text-gray-600 hover:text-[hsl(var(--sps-primary))]" data-tab="products">
+            Product Lineup
+          </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <div id="about" class="tab-pane active">
+            <div class="prose prose-lg max-w-none">
+              <h2 class="text-3xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">About Our Chisels and Breaker Parts</h2>
+              <p class="text-lg text-[hsl(var(--sps-neutral-500))] mb-6 leading-relaxed">
+                SPS Engineering specializes in manufacturing high-quality chisels and breaker parts for construction machinery.
+                Our products are designed to deliver exceptional performance, durability, and reliability in the most demanding construction environments.
+              </p>
+              <div class="grid md:grid-cols-3 gap-6 mt-8">
+                <div class="p-6 bg-[hsl(var(--sps-neutral-50))] rounded-lg">
+                  <h3 class="text-xl font-bold text-[hsl(var(--sps-primary))] mb-3">Quality Materials</h3>
+                  <p class="text-[hsl(var(--sps-neutral-500))]">
+                    Made from premium-grade steel alloys for maximum durability and performance.
+                  </p>
+                </div>
+                <div class="p-6 bg-[hsl(var(--sps-neutral-50))] rounded-lg">
+                  <h3 class="text-xl font-bold text-[hsl(var(--sps-primary))] mb-3">Precision Engineering</h3>
+                  <p class="text-[hsl(var(--sps-neutral-500))]">
+                    Advanced manufacturing processes ensure consistent quality and perfect fit.
+                  </p>
+                </div>
+                <div class="p-6 bg-[hsl(var(--sps-neutral-50))] rounded-lg">
+                  <h3 class="text-xl font-bold text-[hsl(var(--sps-primary))] mb-3">Wide Compatibility</h3>
+                  <p class="text-[hsl(var(--sps-neutral-500))]">
+                    Compatible with major brands and models of hydraulic breakers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="facilities" class="tab-pane hidden">
+            <div class="prose prose-lg max-w-none">
+              <h2 class="text-3xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">Manufacturing Facilities</h2>
+              <p class="text-lg text-[hsl(var(--sps-neutral-500))] mb-6 leading-relaxed">
+                Our state-of-the-art manufacturing facilities are equipped with advanced machinery and quality control systems
+                to ensure every chisel and breaker part meets our rigorous standards.
+              </p>
+              <ul class="space-y-3 text-lg">
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-[hsl(var(--sps-accent))] mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-[hsl(var(--sps-neutral-500))]">CNC machining centers for precision manufacturing</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-[hsl(var(--sps-accent))] mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-[hsl(var(--sps-neutral-500))]">Heat treatment facilities for optimal hardness</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-[hsl(var(--sps-accent))] mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-[hsl(var(--sps-neutral-500))]">Quality testing laboratories</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-[hsl(var(--sps-accent))] mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-[hsl(var(--sps-neutral-500))]">ISO-certified production processes</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="products" class="tab-pane hidden">
+            <div class="mb-8">
+              <h2 class="text-3xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">Product Lineup</h2>
+              <p class="text-lg text-[hsl(var(--sps-neutral-500))] mb-8">
+                Browse our comprehensive range of chisels and breaker parts, available for all major equipment brands.
+              </p>
+              <div class="flex gap-4 mb-8">
+                <a href="/ChiselBrand" class="inline-block bg-[hsl(var(--sps-primary))] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[hsl(var(--sps-secondary))] transition-colors">
+                  Chisel Dimensions by Brand
+                </a>
+                <a href="/ChiselProduct" class="inline-block border-2 border-[hsl(var(--sps-primary))] text-[hsl(var(--sps-primary))] px-6 py-3 rounded-lg font-semibold hover:bg-[hsl(var(--sps-primary))] hover:text-white transition-all">
+                  Product Catalog
+                </a>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-[hsl(var(--sps-neutral-50))] rounded-lg p-6">
+                <h3 class="text-xl font-bold text-[hsl(var(--sps-neutral-900))] mb-3">Moil Point Chisels</h3>
+                <p class="text-[hsl(var(--sps-neutral-500))]">For general breaking and demolition work</p>
+              </div>
+              <div class="bg-[hsl(var(--sps-neutral-50))] rounded-lg p-6">
+                <h3 class="text-xl font-bold text-[hsl(var(--sps-neutral-900))] mb-3">Flat Chisels</h3>
+                <p class="text-[hsl(var(--sps-neutral-500))]">Ideal for concrete surface breaking</p>
+              </div>
+              <div class="bg-[hsl(var(--sps-neutral-50))] rounded-lg p-6">
+                <h3 class="text-xl font-bold text-[hsl(var(--sps-neutral-900))] mb-3">Blunt Chisels</h3>
+                <p class="text-[hsl(var(--sps-neutral-500))]">For compaction and driving applications</p>
+              </div>
+              <div class="bg-[hsl(var(--sps-neutral-50))] rounded-lg p-6">
+                <h3 class="text-xl font-bold text-[hsl(var(--sps-neutral-900))] mb-3">Bushings</h3>
+                <p class="text-[hsl(var(--sps-neutral-500))]">High-quality replacement bushings</p>
+              </div>
+              <div class="bg-[hsl(var(--sps-neutral-50))] rounded-lg p-6">
+                <h3 class="text-xl font-bold text-[hsl(var(--sps-neutral-900))] mb-3">Tool Pins</h3>
+                <p class="text-[hsl(var(--sps-neutral-500))]">Precision-made retaining pins</p>
+              </div>
+              <div class="bg-[hsl(var(--sps-neutral-50))] rounded-lg p-6">
+                <h3 class="text-xl font-bold text-[hsl(var(--sps-neutral-900))] mb-3">Seal Kits</h3>
+                <p class="text-[hsl(var(--sps-neutral-500))]">Complete seal replacement kits</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="py-12 bg-[hsl(var(--sps-neutral-50))]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h3 class="text-2xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">Follow Us</h3>
+        <a
+          href="https://www.facebook.com/sps.breaker"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-[#1877F2] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#166fe5] transition-colors"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Visit our Facebook Page
+        </a>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<script>
+  // Tab switching functionality
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetTab = button.getAttribute('data-tab');
+
+      // Remove active class from all buttons and panes
+      tabButtons.forEach(btn => {
+        btn.classList.remove('active', 'border-[hsl(var(--sps-primary))]', 'text-[hsl(var(--sps-primary))]');
+        btn.classList.add('text-gray-600');
+      });
+      tabPanes.forEach(pane => pane.classList.add('hidden'));
+
+      // Add active class to clicked button and corresponding pane
+      button.classList.add('active', 'border-[hsl(var(--sps-primary))]', 'text-[hsl(var(--sps-primary))]');
+      button.classList.remove('text-gray-600');
+      document.getElementById(targetTab)?.classList.remove('hidden');
+    });
+  });
+</script>
+
+<style>
+  .tab-button {
+    transition: all 0.2s;
+  }
+  .tab-button.active {
+    border-bottom: 2px solid hsl(var(--sps-primary));
+  }
+</style>
