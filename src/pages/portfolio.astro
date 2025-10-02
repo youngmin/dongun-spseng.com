@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const categories = [
+  {
+    title: "CONSTRUCTION",
+    description: "Construction Machinery",
+    items: [
+      { name: "Chisels and Breaker Parts", link: "/portfolio/construction/chisels" },
+      { name: "Breakers And Demolition Attachment", link: "/portfolio/construction/breakers" },
+      { name: "Excavator Arms and Booms", link: "/portfolio/construction/excavator-arms" },
+      { name: "Vibrohammers and Vibrorippers", link: "/portfolio/construction/vibrohammers" }
+    ],
+    image: "/assets/photo-1523848309072-c199db53f137_1749678706477.jpg"
+  },
+  {
+    title: "VEHICLE",
+    description: "Logistics & Lifting",
+    items: [
+      { name: "Logistics Solution", link: "/portfolio/vehicle/logistics" },
+      { name: "Lifting Solution", link: "/portfolio/vehicle/lifting" }
+    ],
+    image: "/assets/vehicle_1749678939203.jpg"
+  },
+  {
+    title: "AGRICULTURE",
+    description: "Farm Implements",
+    items: [
+      { name: "Farming Solution", link: "/portfolio/agriculture/farming" }
+    ],
+    image: "/assets/agriculture_1749678939203.jpg"
+  }
+];
+---
+
+<BaseLayout title="Portfolio - SPS Engineering">
+  <div class="min-h-screen bg-background">
+    <Navigation />
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">Our Portfolio</h1>
+        <p class="text-xl lg:text-2xl font-light max-w-3xl mx-auto">
+          Comprehensive solutions across construction, vehicle, and agriculture sectors
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Categories -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="space-y-24">
+          {categories.map((category, index) => (
+            <div class={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div class={index % 2 === 1 ? 'lg:order-2' : ''}>
+                <img
+                  src={category.image}
+                  alt={category.title}
+                  class="rounded-2xl shadow-xl w-full h-auto"
+                />
+              </div>
+              <div class={index % 2 === 1 ? 'lg:order-1' : ''}>
+                <h2 class="text-3xl lg:text-4xl font-bold text-[hsl(var(--sps-neutral-900))] mb-4">
+                  {category.title}
+                </h2>
+                <p class="text-xl text-[hsl(var(--sps-neutral-500))] mb-8">
+                  {category.description}
+                </p>
+                <div class="space-y-4">
+                  {category.items.map((item) => (
+                    <a
+                      href={item.link}
+                      class="block p-4 bg-[hsl(var(--sps-neutral-50))] rounded-lg hover:bg-[hsl(var(--sps-primary))] hover:text-white transition-all duration-300 group"
+                    >
+                      <div class="flex items-center justify-between">
+                        <span class="font-medium">{item.name}</span>
+                        <span class="group-hover:translate-x-2 transition-transform duration-200">→</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>

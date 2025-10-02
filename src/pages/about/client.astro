@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const clientCategories = [
+  {
+    title: "Construction Industry",
+    clients: [
+      "Major Construction Companies",
+      "Mining Operations",
+      "Demolition Contractors",
+      "Heavy Equipment Rental Services"
+    ]
+  },
+  {
+    title: "Vehicle & Logistics",
+    clients: [
+      "Logistics Companies",
+      "Warehouse Operations",
+      "Port & Marine Services",
+      "Transportation Companies"
+    ]
+  },
+  {
+    title: "Agriculture Sector",
+    clients: [
+      "Large-scale Farms",
+      "Agricultural Cooperatives",
+      "Equipment Distributors",
+      "Farming Enterprises"
+    ]
+  }
+];
+---
+
+<BaseLayout title="Clients - SPS Engineering">
+  <div class="min-h-screen bg-background">
+    <Navigation />
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">Our Clients</h1>
+        <p class="text-xl lg:text-2xl font-light max-w-3xl mx-auto">
+          Trusted partners across global industries
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">
+            Industry-Leading Partnerships
+          </h2>
+          <p class="text-xl text-[hsl(var(--sps-neutral-500))] max-w-3xl mx-auto">
+            We proudly serve clients across construction, logistics, and agriculture sectors worldwide.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {clientCategories.map((category) => (
+            <div class="p-8 bg-[hsl(var(--sps-neutral-50))] rounded-2xl hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-2xl font-bold text-[hsl(var(--sps-primary))] mb-6">
+                {category.title}
+              </h3>
+              <ul class="space-y-3">
+                {category.clients.map((client) => (
+                  <li class="flex items-center text-[hsl(var(--sps-neutral-700))]">
+                    <svg class="w-5 h-5 text-[hsl(var(--sps-accent))] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    {client}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-16 text-center">
+          <div class="inline-block p-8 bg-gradient-to-r from-[hsl(var(--sps-primary))] to-[hsl(var(--sps-secondary))] rounded-2xl text-white">
+            <p class="text-3xl font-bold mb-2">Global Reach</p>
+            <p class="text-lg">Serving clients across multiple continents</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>
