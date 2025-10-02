@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Company Profile - SPS Engineering">
+  <div class="min-h-screen bg-background">
+    <Navigation />
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">Company Profile</h1>
+        <p class="text-xl lg:text-2xl font-light max-w-3xl mx-auto">
+          SPS Engineering - Your Trusted Partner in Industrial Solutions
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="mb-12">
+          <img src="/images/about/company-profile.jpg" alt="SPS Engineering Company Profile" class="w-full rounded-2xl shadow-xl" />
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+          <div class="grid md:grid-cols-2 gap-12 mb-12">
+            <div>
+              <h2 class="text-3xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">About SPS Engineering</h2>
+              <p class="text-lg text-[hsl(var(--sps-neutral-500))] mb-6 leading-relaxed">
+                SPS Engineering is a leading provider of specialized engineering solutions across three key sectors:
+                construction machinery, logistics & lifting equipment, and farm implements.
+              </p>
+              <p class="text-lg text-[hsl(var(--sps-neutral-500))] mb-6 leading-relaxed">
+                With years of experience and expertise in heavy equipment engineering, we deliver robust, reliable
+                machinery and equipment solutions for global industries.
+              </p>
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">Our Expertise</h2>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-[hsl(var(--sps-accent))] mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-lg text-[hsl(var(--sps-neutral-500))]">Construction Equipment Solutions</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-[hsl(var(--sps-accent))] mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-lg text-[hsl(var(--sps-neutral-500))]">Vehicle & Logistics Systems</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-[hsl(var(--sps-accent))] mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-lg text-[hsl(var(--sps-neutral-500))]">Agricultural Equipment Manufacturing</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-[hsl(var(--sps-accent))] mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-lg text-[hsl(var(--sps-neutral-500))]">Custom Engineering Solutions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-[hsl(var(--sps-primary))] to-[hsl(var(--sps-secondary))] rounded-2xl p-12 text-white mt-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Core Values</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="text-center">
+                <div class="bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Quality</h3>
+                <p>Commitment to excellence in every product</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Innovation</h3>
+                <p>Cutting-edge solutions for modern challenges</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Partnership</h3>
+                <p>Building lasting relationships with clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>
