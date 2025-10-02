@@ -18,94 +18,102 @@ import Footer from '../../components/Footer.astro';
       </div>
     </section>
 
-    <!-- Content Section -->
+    <!-- Core Values Section -->
     <section class="py-24 bg-white">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 mb-12">
-          <div>
-            <img src="/images/about/vision-1.jpg" alt="SPS Engineering Vision" class="w-full rounded-2xl shadow-xl" />
-          </div>
-          <div>
-            <img src="/images/about/vision-2.jpg" alt="SPS Engineering Mission" class="w-full rounded-2xl shadow-xl" />
-          </div>
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-[hsl(var(--sps-neutral-900))] mb-4">Our Core Values</h2>
+          <p class="text-xl text-[hsl(var(--sps-neutral-500))] max-w-3xl mx-auto">
+            Four fundamental principles that guide everything we do
+          </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-12 mt-16">
-          <div class="bg-[hsl(var(--sps-neutral-50))] rounded-2xl p-8">
-            <div class="mb-6">
-              <svg class="w-16 h-16 text-[hsl(var(--sps-primary))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-              </svg>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Quality -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-[hsl(var(--sps-neutral-200))]">
+            <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center p-6">
+              <img src="/images/about/quality.png" alt="Quality" class="w-full h-full object-contain" />
             </div>
-            <h2 class="text-3xl font-bold text-[hsl(var(--sps-neutral-900))] mb-6">Our Vision</h2>
-            <p class="text-lg text-[hsl(var(--sps-neutral-500))] leading-relaxed mb-6">
-              To be the premier engineering partner for construction, vehicle, and agriculture sectors worldwide,
-              recognized for our quality, innovation, and customer-centric approach.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-[hsl(var(--sps-accent))] mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            <div class="p-6">
+              <div class="mb-4">
+                <svg class="w-10 h-10 text-[hsl(var(--sps-primary))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span class="text-[hsl(var(--sps-neutral-500))]">Global leadership in industrial equipment</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-[hsl(var(--sps-accent))] mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-[hsl(var(--sps-neutral-500))]">Sustainable and innovative solutions</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-[hsl(var(--sps-accent))] mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-[hsl(var(--sps-neutral-500))]">Industry-leading customer satisfaction</span>
-              </li>
-            </ul>
+              </div>
+              <h3 class="text-2xl font-bold text-[hsl(var(--sps-neutral-900))] mb-4">Quality</h3>
+              <ul class="space-y-2 text-sm text-[hsl(var(--sps-neutral-600))]">
+                <li>• Never compromise on quality and services</li>
+                <li>• Supply genuine and high quality products</li>
+                <li>• Provide all customers with selected products</li>
+                <li>• Best service with high satisfaction</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="bg-gradient-to-br from-[hsl(var(--sps-primary))] to-[hsl(var(--sps-secondary))] rounded-2xl p-8 text-white">
-            <div class="mb-6">
-              <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
+          <!-- Cost -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-[hsl(var(--sps-neutral-200))]">
+            <div class="h-48 bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center p-6">
+              <img src="/images/about/cost.png" alt="Cost" class="w-full h-full object-contain" />
             </div>
-            <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
-            <p class="text-lg leading-relaxed mb-6">
-              We are dedicated to delivering robust, reliable machinery and equipment solutions for global industries,
-              providing innovative engineering services that exceed our customers' expectations.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            <div class="p-6">
+              <div class="mb-4">
+                <svg class="w-10 h-10 text-[hsl(var(--sps-primary))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span>Deliver exceptional quality products</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </div>
+              <h3 class="text-2xl font-bold text-[hsl(var(--sps-neutral-900))] mb-4">Cost</h3>
+              <ul class="space-y-2 text-sm text-[hsl(var(--sps-neutral-600))]">
+                <li>• Products are reasonable and affordable</li>
+                <li>• Promise to offer the best price</li>
+                <li>• Believe in keeping customers happy</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fast Delivery -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-[hsl(var(--sps-neutral-200))]">
+            <div class="h-48 bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center p-6">
+              <img src="/images/about/fast delivery.png" alt="Fast Delivery" class="w-full h-full object-contain" />
+            </div>
+            <div class="p-6">
+              <div class="mb-4">
+                <svg class="w-10 h-10 text-[hsl(var(--sps-primary))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
-                <span>Provide comprehensive customer support</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </div>
+              <h3 class="text-2xl font-bold text-[hsl(var(--sps-neutral-900))] mb-4">Fast Delivery</h3>
+              <ul class="space-y-2 text-sm text-[hsl(var(--sps-neutral-600))]">
+                <li>• Credibility is most important for business</li>
+                <li>• Do our best to deliver products fast</li>
+                <li>• Always our main concern and focus</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Honesty -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-[hsl(var(--sps-neutral-200))]">
+            <div class="h-48 bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center p-6">
+              <img src="/images/about/honesty.png" alt="Honesty" class="w-full h-full object-contain" />
+            </div>
+            <div class="p-6">
+              <div class="mb-4">
+                <svg class="w-10 h-10 text-[hsl(var(--sps-primary))]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
                 </svg>
-                <span>Drive continuous innovation</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>Build lasting partnerships</span>
-              </li>
-            </ul>
+              </div>
+              <h3 class="text-2xl font-bold text-[hsl(var(--sps-neutral-900))] mb-4">Honesty</h3>
+              <ul class="space-y-2 text-sm text-[hsl(var(--sps-neutral-600))]">
+                <li>• Always give honest answers</li>
+                <li>• Think customers as family and friends</li>
+                <li>• Do business with honesty</li>
+                <li>• Take honest profit always</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
 
     <Footer />
   </div>
