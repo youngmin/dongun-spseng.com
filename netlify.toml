@@ -1,0 +1,28 @@
+# Netlify 배포 설정 - Astro Static Site
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# 환경 변수
+[build.environment]
+  NODE_VERSION = "18"
+
+# 헤더 설정 (캐싱)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Contact Form 처리 (Netlify Forms 사용시)
+# HTML form에 netlify 속성 추가하면 자동 처리
+# <form netlify name="contact" ...>

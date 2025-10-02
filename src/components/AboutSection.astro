@@ -1,0 +1,45 @@
+---
+const stats = [
+  { value: "500+", label: "Projects Completed" },
+  { value: "25+", label: "Years Experience" },
+  { value: "40+", label: "Countries Served" },
+  { value: "98%", label: "Client Satisfaction" }
+];
+---
+
+<section id="about" class="py-24 bg-[hsl(var(--sps-neutral-50))]">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+          alt="Professional engineering team collaborating on technical drawings"
+          class="rounded-2xl shadow-lg w-full h-auto"
+        />
+      </div>
+      <div>
+        <h2 class="text-4xl lg:text-5xl font-bold text-[hsl(var(--sps-neutral-900))] mb-8">About SPS Engineering</h2>
+        <div class="space-y-6 text-lg text-[hsl(var(--sps-neutral-500))] leading-relaxed">
+          <p>
+            With over two decades of heavy equipment engineering excellence, SPS Engineering specializes in designing and manufacturing robust machinery for construction, vehicle, and agriculture sectors worldwide.
+          </p>
+          <p>
+            Our team of certified engineers and technical specialists brings deep expertise in heavy machinery design, hydraulic systems, and equipment optimization, delivering durable solutions that withstand demanding operational environments.
+          </p>
+          <p>
+            We combine advanced engineering technology with proven mechanical principles to create equipment that maximizes productivity, minimizes downtime, and drives success for our global clientele across diverse industrial applications.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8 mt-12">
+          {stats.map((stat) => (
+            <div class="text-center">
+              <div class="text-4xl font-bold text-[hsl(var(--sps-primary))] mb-2">{stat.value}</div>
+              <div class="text-[hsl(var(--sps-neutral-500))] font-medium">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
